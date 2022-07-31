@@ -40,7 +40,7 @@ const Search = () => {
           return (
             <li key={idx}>
               <Link href={`${PATHS.INTERPRETATION}/${it}`}>
-                <a className="text-sky-800">{it}</a>
+                <a onClick={() => setSearchValue("")} className="text-sky-800">{it}</a>
               </Link>
             </li>
           )
