@@ -13,12 +13,15 @@ type InterpretationProps = {
 }
 
 const Word: NextPage<InterpretationProps> = ({interpretations}) => {
-  const title = `К чему сн${getLetter(interpretations[0].title)}тся ${interpretations[0].title} | Сонник - Восне`
+  const title = `К чему сн${getLetter(interpretations[0].title)}тся ${interpretations[0].title} | Сонник - Восне`;
+  const description = interpretations[0].interpretations.join(" ");
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={`${interpretations[0].interpretations}`}/>
+        <meta name="description" content={description}/>
+        <meta property="og:title" content={title}/>
+        <meta property="og:description" content={description}/>
       </Head>
       <MainLayout>
         <InterpretationContent interpretations={interpretations}/>

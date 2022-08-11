@@ -12,12 +12,15 @@ type LetterProps = {
 }
 
 const Letter: NextPage<LetterProps> = ({titles, letter}) => {
-  const title = `Толкование снов на букву ${letter} | Сонник - Восне`
+  const title = `Толкование снов на букву ${letter} | Сонник - Восне`;
+  const description = "Сонник - Толкование снов онлайн бесплатно. Сонник Миллера, Сонник Ванги, Сонник Евгения Цветкова, Исламский сонник, Мусульманский сонник и другие."
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content="Сонник - Толкование снов онлайн бесплатно. Сонник Миллера, Сонник Ванги, Сонник Евгения Цветкова, Исламский сонник, Мусульманский сонник и другие."/>
+        <meta name="description" content={description}/>
+        <meta property="og:title" content={title}/>
+        <meta property="og:description" content={description}/>
       </Head>
       <MainLayout>
         <LetterContent titles={titles} letter={letter}/>

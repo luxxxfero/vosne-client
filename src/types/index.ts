@@ -22,3 +22,11 @@ export type TOP_DREAM = string;
 export type ABC = string[];
 export type TOP_DREAMS = TOP_DREAM[];
 export type SEARCH_DATA = SEARCH[];
+
+
+export type BREADCRUMBS_ITEM = {
+  link: string,
+  title: string
+}
+
+export type BREADCRUMBS_LIST = BREADCRUMBS_ITEM[]

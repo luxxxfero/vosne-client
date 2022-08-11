@@ -18,6 +18,7 @@ function MyApp({Component, pageProps}: AppProps) {
         <link rel="preconnect" href="https://mc.yandex.ru"/>
         <meta name="yandex-verification" content="1a658ccd12f4daad" />
         <meta name="google-site-verification" content="rbGU8L0m6OaIkjGKKcYXohU01PmGcsJeHL62eKf5JgA" />
+        <meta property="og:image" content="https://www.xn--b1agxdp.xn--p1ai/og.jpg"/>
       </Head>
       <YMInitializer accounts={[89794957]} options={{webvisor: false, defer: true}}/>
       <Component {...pageProps} />
