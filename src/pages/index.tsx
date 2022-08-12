@@ -10,13 +10,18 @@ type HomeProps = {
 }
 
 const Home: NextPage<HomeProps> = ({topDreams}) => {
+
+  const title = "Сонник - Толкование снов онлайн бесплатно. Сонник Миллера, Сонник Ванги, Исламский сонник и др. |" +
+    " Восне.рф";
+  const description = "Сонник - Толкование снов онлайн бесплатно. Сонник Миллера, Сонник Ванги, Сонник Евгения Цветкова, Исламский сонник, Мусульманский сонник и другие."
+
   return (
     <>
       <Head>
-        <title>Сонник - Толкование снов онлайн бесплатно | Восне</title>
-        <meta name="description" content="Сонник - Толкование снов онлайн бесплатно. Сонник Миллера, Сонник Ванги, Сонник Евгения Цветкова, Исламский сонник, Мусульманский сонник и другие." />
-        <meta property="og:title" content="Сонник - Толкование снов онлайн бесплатно | Восне"/>
-        <meta property="og:description" content="Сонник - Толкование снов онлайн бесплатно. Сонник Миллера, Сонник Ванги, Сонник Евгения Цветкова, Исламский сонник, Мусульманский сонник и другие."/>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title}/>
+        <meta property="og:description" content={description}/>
       </Head>
       <MainLayout>
         <HomeContent topDreams={topDreams}/>

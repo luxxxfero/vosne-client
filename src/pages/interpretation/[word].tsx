@@ -13,7 +13,7 @@ type InterpretationProps = {
 }
 
 const Word: NextPage<InterpretationProps> = ({interpretations}) => {
-  const title = `К чему сн${getLetter(interpretations[0].title)}тся ${interpretations[0].title} | Сонник - Восне`;
+  const title = `К чему сн${getLetter(interpretations[0].title)}тся ${interpretations[0].title}. ${interpretations[0].title} во сне. Сон ${interpretations[0].title} | Восне.рф`;
   const description = interpretations[0].interpretations.join(" ");
   return (
     <>
