@@ -38,7 +38,7 @@ const HomeContent: React.FC<HomeContentProps> = ({topDreams}) => {
           </ul>
         </nav>
       </Section>
-      <Section className="rounded p-5 bg-amber-100" title="Как толковать сны">
+      <Section className="rounded p-5 bg-blue-100" title="Как толковать сны">
         <p className="mb-3">
           Для того чтобы хорошо толковать свои сны, надо научиться их запоминать.
         </p>
