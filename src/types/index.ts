@@ -2,6 +2,7 @@ export enum PATHS {
   "HOME" = "/",
   "INTERPRETATION" = "/толкование",
   "LETTER" = "/буква",
+  "LD" = "/ос"
 }
 
 export type INTERPRETATION = {

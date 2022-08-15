@@ -33,6 +33,10 @@ const nextConfig = {
       {
         source: `/${encodeURIComponent("поиск")}/:text`,
         destination: "/search/:text"
+      },
+      {
+        source: `/${encodeURIComponent("ос")}`,
+        destination: "/ld"
       }
     ]
   }
