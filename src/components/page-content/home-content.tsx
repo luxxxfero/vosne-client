@@ -36,7 +36,7 @@ const HomeContent: React.FC<HomeContentProps> = ({topDreams}) => {
   return (
     <>
       <section className="text-white mb-7 rounded p-5 bg-blue-600">
-        <h1 className="mb-4 text-2xl">Сонник - толкование снов</h1>
+        <h1 className="mb-4 text-2xl">Сонник «Восне» - толкование снов онлайн бесплатно </h1>
         <p>Толкование снов по 150 сонникам. Сонник Миллера, Сонник Ванги, Сонник Евгения Цветкова, Исламский сонник,
           Мусульманский сонник и другие.</p>
       </section>
