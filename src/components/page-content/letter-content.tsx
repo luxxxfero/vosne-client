@@ -18,9 +18,9 @@ const LetterContent: React.FC<LetterContentProps> = ({titles, letter}) => {
 
   const titleEl = titles.map((it, idx) => {
     return (
-      <li className="" key={idx}>
+      <li className="text-center bg-white px-2 py-1 border border-gray-200 rounded truncate" key={idx}>
         <Link href={`${PATHS.INTERPRETATION}/${it}`}>
-          <a className="text-blue-600 break-all border h-full flex text-center items-center justify-center w-full p-3">{it}</a>
+          <a>{it}</a>
         </Link>
       </li>
     )
@@ -30,7 +30,7 @@ const LetterContent: React.FC<LetterContentProps> = ({titles, letter}) => {
     <>
       <Breadcrumbs breadcrumbsList={breadcrumbs}/>
       <Section title={`Толкование снов на букву ${letter}`}>
-        <ul className="grid grid-cols-titles-fluid gap-3">
+        <ul className="grid grid-cols-titles-fluid gap-2">
           {titleEl}
         </ul>
       </Section>

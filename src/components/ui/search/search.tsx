@@ -53,7 +53,7 @@ const Search = () => {
     <div className="relative flex flex-col gap-2">
       <label className="w-full relative">
         <input value={searchValue} onChange={onChangeSearchValue}
-               className="text-black text-sm w-full h-10 px-4 py-1.5 pr-10 border rounded" placeholder="Что вам приснилось?"
+               className="text-black text-sm w-full h-10 px-4 py-1.5 pr-10 border rounded" placeholder="Поиск по сонникам..."
                type="text"/>
       </label>
       {searchValue.length > 1 &&

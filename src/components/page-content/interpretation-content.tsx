@@ -7,6 +7,7 @@ import Link from "next/link";
 import CaretRightIcon from "../icons/caret-right-icon";
 import CaretDownIcon from "../icons/caret-down-icon";
 import cn from "classnames";
+import Image from "next/image";
 
 type InterpretationContentProps = {
   interpretations: INTERPRETATIONS,
@@ -58,7 +59,7 @@ const InterpretationContent: React.FC<InterpretationContentProps> = ({interpreta
             </button>
           }
         </div>
-        <div className={cn("mt-2", {
+        <div className={cn("mt-3", {
           "hidden": !isOpenNavigation,
           "block": isOpenNavigation
         })}>
@@ -68,7 +69,7 @@ const InterpretationContent: React.FC<InterpretationContentProps> = ({interpreta
                 <li key={idx} className="mb-1 text-sm">
                   <span className="mr-1.5 text-green-600">{`${idx + 1}.`}</span>
                   <Link href={`${PATHS.INTERPRETATION}/${it.title}#${it.dreamBookName}`}>
-                    <a className="underline">{`${it.dreamBookName.toUpperCase()}`}</a>
+                    <a className="underline">{`${it.dreamBookName.slice(0, 1).toUpperCase() + it.dreamBookName.slice(1)}`}</a>
                   </Link>
                 </li>
               )
