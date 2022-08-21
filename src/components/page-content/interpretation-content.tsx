@@ -8,6 +8,7 @@ import CaretRightIcon from "../icons/caret-right-icon";
 import CaretDownIcon from "../icons/caret-down-icon";
 import cn from "classnames";
 import Image from "next/image";
+import {getKeys} from "../../utils";
 
 type InterpretationContentProps = {
   interpretations: INTERPRETATIONS,
@@ -23,10 +24,13 @@ const InterpretationContent: React.FC<InterpretationContentProps> = ({interpreta
     {link: `#`, title: interpretations[0].title},
   ]
 
+  const keys = getKeys(interpretations[0].title, interpretations.length);
+
   const titleEl = interpretations.map((it, idx) => {
     return (
       <li id={it.dreamBookName} className="bg-white mb-5 p-4 rounded border border-gray-200" key={it._id}>
-        <h3 className="uppercase text-base font-medium mb-3">{it.dreamBookName}</h3>
+        <h3 className="uppercase text-blue-600 text-base font-medium mb-3">{it.dreamBookName}</h3>
+        <h4 className="uppercase text-sm font-medium mb-3">{keys[idx]}</h4>
         <ul>
           {it.interpretations.map((it, idx) => {
             return (
